@@ -29,3 +29,8 @@ footer{text-align:center;color:var(--muted);padding:36px 20px;border-top:1px sol
 .video-thumb{position:relative;display:block;border-radius:12px;overflow:hidden;background:#000}
 .video-thumb img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
 .play-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(1,97,181,.94);color:#fff;font-weight:800;padding:12px 20px;border-radius:999px;white-space:nowrap}
+.bus-sheet{width:100%;height:auto;border-radius:14px;border:1px solid #1e3a5f;display:block}
+.bus-fig{margin:16px 0 4px}
+.bus-fig figcaption{color:var(--muted);font-size:.92rem;margin-top:8px;text-align:center}
+.bus-feats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px;padding:0;list-style:none}
+.bus-feats li{background:#0f2c4c;border:1px solid #1e4d7a;color:#bfdbfe;padding:6px 12px;border-radius:999px;font-size:.9rem;font-weight:600}
