@@ -67,7 +67,10 @@
       <figure class="bus-fig">
         <a href="ra-tods-bus-character-sheet.jpg"><img class="bus-sheet" src="ra-tods-bus-character-sheet.jpg" alt="Ra Tod's Bus character sheet — front, front 3/4, side, rear 3/4 and rear views of the short yellow drag bus, with detail callouts for the hood scoop supercharger, chromed grille and warning lights, BTK dual rear tires, mobile DJ station, and side exhaust pipes" /></a>
         <figcaption>The official character sheet for Ra Tod's Bus — tap to see it full size.</figcaption>
-      </figure>
+            </figure>
+      <div class="bus-action-row">
+        <button type="button" class="bus-action-btn" id="busActionBtn" aria-haspopup="dialog">▶ Bus in Action</button>
+      </div>
     </section>
 
     <section id="listen" class="section">
@@ -82,5 +85,44 @@
   <footer>
     <p>© 2026 Ra Tod Musik. All rights reserved.</p>
   </footer>
+
+  <div class="bus-modal" id="busModal" role="dialog" aria-modal="true" aria-labelledby="busModalTitle" hidden>
+    <div class="bus-modal-box">
+      <div class="bus-modal-head">
+        <p class="bus-modal-title" id="busModalTitle">Bus in Action — Ra Tod's Bus at the drag strip</p>
+        <button type="button" class="bus-modal-close" id="busModalClose" aria-label="Close video">✕</button>
+      </div>
+      <video id="busModalVideo" controls playsinline preload="none" poster="ra-tod-bus-drag-poster.jpg">
+        <source src="ra-tod-bus-drag-racing.mp4" type="video/mp4" />
+        Your browser can't play this video.
+      </video>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var btn = document.getElementById('busActionBtn');
+      var modal = document.getElementById('busModal');
+      var closeBtn = document.getElementById('busModalClose');
+      var video = document.getElementById('busModalVideo');
+      function openModal() {
+        modal.hidden = false;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        if (video) { try { video.currentTime = 0; video.play(); } catch (e) {} }
+        if (closeBtn) closeBtn.focus();
+      }
+      function closeModal() {
+        if (video) { video.pause(); try { video.currentTime = 0; } catch (e) {} }
+        modal.classList.remove('open');
+        modal.hidden = true;
+        document.body.style.overflow = '';
+        if (btn) btn.focus();
+      }
+      btn.addEventListener('click', openModal);
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+    })();
+  </script>
 </body>
 </html>

@@ -35,3 +35,16 @@ footer{text-align:center;color:var(--muted);padding:36px 20px;border-top:1px sol
 .bus-feats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px;padding:0;list-style:none}
 .bus-feats li{background:#0f2c4c;border:1px solid #1e4d7a;color:#bfdbfe;padding:6px 12px;border-radius:999px;font-size:.9rem;font-weight:600}
 .about-banner{width:100%;height:auto;border-radius:14px;border:1px solid #1e3a5f;display:block;margin-bottom:18px}
+
+.bus-action-row{text-align:center;margin:18px 0 6px}
+.bus-action-btn{background:var(--accent);color:#fff;border:2px solid var(--accent2);font-weight:800;font-size:1.05rem;padding:13px 30px;border-radius:999px;cursor:pointer;letter-spacing:.02em;box-shadow:0 10px 26px rgba(1,97,181,.45)}
+.bus-action-btn:hover{background:#0277d6}
+.bus-action-btn:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+.bus-modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;background:rgba(2,6,14,.86);padding:18px}
+.bus-modal.open{display:flex}
+.bus-modal-box{width:min(880px,96vw);background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.bus-modal-head{display:flex;justify-content:space-between;align-items:center;margin:2px 4px 10px}
+.bus-modal-title{font-weight:800;color:#dbeafe;font-size:1.1rem;margin:0}
+.bus-modal-close{background:transparent;border:1px solid var(--line);color:var(--text);width:38px;height:38px;border-radius:50%;font-size:1.15rem;cursor:pointer;line-height:1}
+.bus-modal-close:hover{border-color:var(--accent2);color:var(--accent2)}
+.bus-modal video{width:100%;height:auto;max-height:76vh;border-radius:12px;background:#000;display:block}
