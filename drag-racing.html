@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>Ra-Tod-ed Drag Racing — by Ra Tod</title>
+  <meta name="description" content="Ra-Tod-ed Drag Racing by Ra Tod — the Short Bus hits the drag strip. Pick your ride, burn out, earn your NOS, and run both strips for the best total time. Free to play in your browser." />
+  <link rel="icon" href="assets/ra-tod-icon.png" />
+
+  <!-- Open Graph / social card (this page is shared from an X post) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ra Tod Musik" />
+  <meta property="og:title" content="Ra-Tod-ed Drag Racing — by Ra Tod" />
+  <meta property="og:description" content="The Short Bus hits the drag strip. Pick your ride, burn out, earn your NOS, and run both strips for the best total time. Plays free in your browser." />
+  <meta property="og:url" content="https://ratodmusik.github.io/ra-tod-musik/drag-racing.html" />
+  <meta property="og:image" content="https://ratodmusik.github.io/ra-tod-musik/ra-tod-bus-drag-poster.jpg" />
+  <meta property="og:image:alt" content="Ra Tod's yellow Short Bus drag racing poster" />
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:site" content="@RaTod173704" />
+  <meta name="twitter:title" content="Ra-Tod-ed Drag Racing — by Ra Tod" />
+  <meta name="twitter:description" content="The Short Bus hits the drag strip. Pick your ride, burn out, earn your NOS, and run both strips for the best total time." />
+  <meta name="twitter:image" content="https://ratodmusik.github.io/ra-tod-musik/ra-tod-bus-drag-square.jpg" />
+  <meta name="twitter:image:alt" content="Ra Tod's yellow Short Bus at the drag strip" />
+  <meta name="twitter:player" content="https://ratodmusik.github.io/ra-tod-ed-drag-racing/" />
+  <meta name="twitter:player:width" content="480" />
+  <meta name="twitter:player:height" content="480" />
+
+  <style>
+    /* Mirrors ra-tod-musik style.css — same palette, type and chrome. */
+    :root{--bg:#08131f;--panel:#0d1b31;--text:#f0f6ff;--muted:#9db8d9;--accent:#0161b5;--accent2:#38bdf8;--line:#1e3a5f}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:var(--accent2)}
+    .site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;position:sticky;top:0;z-index:50;background:rgba(6,13,26,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.12em;color:var(--text);text-decoration:none}
+    .brand span{color:var(--accent2)}
+    .brand-icon{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--accent2);background:#0161b5}
+    nav a{color:var(--text);text-decoration:none;margin-left:18px;font-size:.95rem}
+    nav a:hover{color:var(--accent2)}
+    .hero{text-align:center;padding:64px 20px 60px;background:radial-gradient(800px 420px at 50% 0%,rgba(47,125,246,.35),transparent)}
+    .hero-poster{width:min(860px,94vw);height:auto;border-radius:18px;border:3px solid var(--accent);box-shadow:0 18px 50px rgba(1,97,181,.35);display:block;margin:0 auto 30px}
+    .eyebrow{letter-spacing:.25em;text-transform:uppercase;color:var(--accent2);font-size:.8rem;margin:0}
+    .hero h1{font-size:clamp(2.4rem,7vw,4.6rem);line-height:1.05;margin:10px 0 4px}
+    .byline{color:var(--accent2);font-weight:700;font-size:1.15rem;margin:0 0 12px;letter-spacing:.04em}
+    .tagline{color:var(--muted);font-size:1.15rem;max-width:640px;margin:0 auto}
+    .cta-row{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{border:1px solid var(--line);color:var(--text);padding:11px 20px;border-radius:999px;text-decoration:none;background:var(--panel)}
+    .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:700}
+    .btn.play{background:var(--accent);color:#fff;border:2px solid var(--accent2);font-weight:800;font-size:1.3rem;padding:16px 46px;letter-spacing:.03em;box-shadow:0 12px 30px rgba(1,97,181,.5)}
+    .btn.play:hover{background:#0277d6}
+    .btn.play:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+    .section{max-width:860px;margin:0 auto;padding:42px 20px}
+    .section.wide{max-width:1080px}
+    .section h2{font-size:1.9rem;margin:0 0 10px;color:#dbeafe}
+    .section .lede{color:var(--muted);margin:0 0 8px}
+    .feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:20px}
+    .feat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+    .feat h3{margin:0 0 6px;font-size:1.08rem;color:#dbeafe}
+    .feat p{margin:0;color:var(--muted);font-size:.98rem}
+    .racer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:22px}
+    .racer{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+    .racer a{display:block;background:#0a1626}
+    .racer img{display:block;width:100%;aspect-ratio:3/2;object-fit:contain}
+    .racer-body{padding:16px 18px 18px}
+    .racer h3{margin:0 0 4px;font-size:1.2rem;color:#dbeafe}
+    .racer p{margin:0;color:var(--muted);font-size:.98rem}
+    .finale{text-align:center}
+    .finale .cta-row{margin-top:8px}
+    .more-links{margin-top:34px}
+    .more-links p{color:var(--muted);margin:0 0 14px;font-weight:600;letter-spacing:.02em}
+    .link-grid{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 26px;text-decoration:none;color:var(--text);font-weight:700}
+    .card:hover{border-color:var(--accent2)}
+    .card small{color:var(--muted);font-weight:400}
+    footer{text-align:center;color:var(--muted);padding:36px 20px;border-top:1px solid var(--line)}
+    @media (max-width:560px){
+      .site-header{padding:12px 14px;flex-wrap:nowrap}
+      .brand{font-size:.88rem;letter-spacing:.08em;gap:8px;flex-shrink:0}
+      .brand-icon{width:36px;height:36px}
+      nav{display:flex;flex-wrap:nowrap;align-items:center}
+      nav a{margin-left:11px;font-size:.8rem;white-space:nowrap}
+      .hero{padding:40px 16px 44px}
+      .section{padding:34px 16px}
+      .btn.play{font-size:1.15rem;padding:14px 38px;width:100%;max-width:340px}
+      .cta-row .btn:not(.play){width:100%;max-width:340px;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="https://ratodmusik.github.io/ra-tod-musik/">
+      <img class="brand-icon" src="assets/ra-tod-icon.png" alt="Ra Tod character icon" />
+      RA TOD <span>MUSIK</span>
+    </a>
+    <nav>
+      <a href="https://ratodmusik.github.io/ra-tod-musik/#about">About Me</a>
+      <a href="https://ratodmusik.github.io/ra-tod-musik/#listen">Listen</a>
+      <a href="https://ratodmusik.github.io/ra-tod-musik/videos.html">Musik Videos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="hero-poster" src="assets/ra-tod-bus-drag-poster.jpg" alt="Ra Tod's yellow Short Bus at the drag strip, poster art for Ra-Tod-ed Drag Racing" />
+      <p class="eyebrow">The Game</p>
+      <h1>Ra-Tod-ed Drag Racing</h1>
+      <p class="byline">by Ra Tod</p>
+      <p class="tagline">The Short Bus hits the drag strip. Pick your ride, burn out, earn your NOS, and run both strips for the best total time.</p>
+      <div class="cta-row">
+        <a class="btn play" href="https://ratodmusik.github.io/ra-tod-ed-drag-racing/">▶ Play Now</a>
+      </div>
+      <div class="cta-row" style="margin-top:14px">
+        <a class="btn" href="#how">How It Plays</a>
+        <a class="btn" href="#racers">Meet the Racers</a>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <h2>How It Plays</h2>
+      <p class="lede">Straight-up drag racing in your browser — no download, no install.</p>
+      <div class="feat-grid">
+        <div class="feat">
+          <h3>Twin Drag Strips</h3>
+          <p>Every race runs two strips. Your time is Strip 1 + Strip 2 + Total — both runs count.</p>
+        </div>
+        <div class="feat">
+          <h3>Four Rides Per Race</h3>
+          <p>Four rides line up per race: you pick yours, and three rivals fill the other lanes.</p>
+        </div>
+        <div class="feat">
+          <h3>Earn Your NOS</h3>
+          <p>NOS is earned by how you drive — then spend it down the strip when it counts.</p>
+        </div>
+        <div class="feat">
+          <h3>Your Transmission</h3>
+          <p>Automatic or manual transmission — your call, every race.</p>
+        </div>
+        <div class="feat">
+          <h3>Burnouts &amp; Launch</h3>
+          <p>Burn out, stage, and launch on the tree — with racing sounds only. No music in the game; the strip does the talking.</p>
+        </div>
+        <div class="feat">
+          <h3>Plays in the Browser</h3>
+          <p>No download, no install. Open the page and you're at the strip.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="racers" class="section wide">
+      <h2>Meet the Racers</h2>
+      <p class="lede">Six selectable rides. Tap a character sheet to see it full size.</p>
+      <div class="racer-grid">
+        <article class="racer">
+          <a href="assets/short-bus-sheet.jpg"><img src="assets/short-bus-sheet.jpg" alt="The Short Bus character sheet — front, side and rear views of Ra Tod's yellow drag bus with detail callouts" loading="lazy" /></a>
+          <div class="racer-body">
+            <h3>The Short Bus</h3>
+            <p>Ra Tod's own yellow drag bus. The star of the strip.</p>
+          </div>
+        </article>
+        <article class="racer">
+          <a href="assets/fetty-bus-sheet.jpg"><img src="assets/fetty-bus-sheet.jpg" alt="Fetty Bus character sheet — small yellow drag hatchback with a hood blower and wide rear drag tires" loading="lazy" /></a>
+          <div class="racer-body">
+            <h3>Fetty Bus</h3>
+            <p>Small, yellow and boosted — blower through the hood, fat drag tires out back.</p>
+          </div>
+        </article>
+        <article class="racer">
+          <a href="assets/grey-truck-sheet.jpg"><img src="assets/grey-truck-sheet.jpg" alt="Ted's Grey Truck character sheet — grey extended cab pickup with bronze wheels" loading="lazy" /></a>
+          <div class="racer-body">
+            <h3>Ted's Grey Truck</h3>
+            <p>Wally World's grey pickup, bronze wheels, ready to run.</p>
+          </div>
+        </article>
+        <article class="racer">
+          <a href="assets/lil-tone-sheet.jpg"><img src="assets/lil-tone-sheet.jpg" alt="Lil Tone's Sprint Car character sheet — maroon-and-white winged sprint car with SUPER LUBER on the top wing" loading="lazy" /></a>
+          <div class="racer-body">
+            <h3>Lil Tone's Sprint Car</h3>
+            <p>Maroon-and-white winged sprint car. SUPER LUBER on the wing.</p>
+          </div>
+        </article>
+        <article class="racer">
+          <a href="assets/bp-cruiser-sheet.jpg"><img src="assets/bp-cruiser-sheet.jpg" alt="BP Cruiser character sheet — Bobby's black three-wheeled cargo truck with a lime-green band" loading="lazy" /></a>
+          <div class="racer-body">
+            <h3>BP Cruiser</h3>
+            <p>Bobby's black three-wheeled cruiser with the lime-green band.</p>
+          </div>
+        </article>
+        <article class="racer">
+          <a href="assets/aceman-buggy-sheet.jpg"><img src="assets/aceman-buggy-sheet.jpg" alt="ACEMAN's Monster Buggy character sheet — matte black buggy on a monster-truck chassis with red rim rings" loading="lazy" /></a>
+          <div class="racer-body">
+            <h3>ACEMAN's Monster Buggy</h3>
+            <p>Matte black buggy on a monster-truck chassis, red rim rings.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section finale">
+      <h2>Ready to Run?</h2>
+      <p class="lede">The tree's lit and the lanes are open.</p>
+      <div class="cta-row">
+        <a class="btn play" href="https://ratodmusik.github.io/ra-tod-ed-drag-racing/">▶ Play Now</a>
+      </div>
+      <div class="more-links">
+        <p>More from Ra Tod Musik</p>
+        <div class="link-grid">
+          <a class="card" href="https://ratodmusik.github.io/ra-tod-musik/">Ra Tod Musik<br /><small>ratodmusik.github.io</small></a>
+          <a class="card" href="https://www.youtube.com/@RaTodMusik">YouTube<br /><small>@RaTodMusik</small></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Ra Tod Musik. All rights reserved.</p>
+  </footer>
+</body>
+</html>
