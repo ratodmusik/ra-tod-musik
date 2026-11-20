@@ -63,14 +63,13 @@ footer{text-align:center;color:var(--muted);padding:36px 20px;border-top:1px sol
 .bus-modal-close:hover{border-color:var(--accent2);color:var(--accent2)}
 .bus-modal video{width:100%;height:auto;max-height:76vh;border-radius:12px;background:#000;display:block}
 
-/* Home hero: RATOX Jukebox link shares the top row with the Ra Tod image.
-   Equal-width side cells keep the image exactly centered. */
-.hero-top{display:flex;align-items:center;justify-content:center;gap:28px;margin-bottom:22px}
-.hero-top .hero-char{margin-bottom:0}
-.jukebox-link{flex:0 0 140px;display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;color:var(--text);text-align:center}
-.jukebox-link:hover .jukebox-label{color:var(--accent2)}
-.jukebox-icon{width:84px;height:84px;filter:drop-shadow(0 8px 18px rgba(1,97,181,.45))}
-.jukebox-label{font-weight:800;letter-spacing:.06em;line-height:1.25}
-.jukebox-label small{display:block;color:var(--muted);font-weight:600;letter-spacing:.14em;font-size:.72rem;margin-top:2px}
-.hero-spacer{flex:0 0 140px}
-@media (max-width:760px){.hero-top{flex-direction:column;gap:16px}.hero-spacer{display:none}.jukebox-link{flex:none}}
+/* RATOX Jukebox link: small icon, centered in the site header. */
+.header-jukebox{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--text)}
+.header-jukebox svg{width:30px;height:30px;filter:drop-shadow(0 4px 10px rgba(1,97,181,.45))}
+.header-jukebox span{font-weight:800;font-size:.8rem;letter-spacing:.14em;color:var(--accent2)}
+.header-jukebox:hover span{color:var(--text)}
+@media (max-width:760px){
+  .site-header{flex-wrap:wrap;row-gap:8px}
+  .header-jukebox{position:static;transform:none;flex-basis:100%;justify-content:center}
+  .header-jukebox svg{width:26px;height:26px}
+}
